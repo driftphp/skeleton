@@ -1,0 +1,22 @@
+parameters:
+    kernel.secret: yoursecretshouldbehere
+
+framework:
+    form: false
+    assets: false
+    session: false
+    translator: false
+    php_errors:
+        log: false
+
+# config/services.yaml
+services:
+    _defaults:
+        autowire: false
+        autoconfigure: false
+        public: true
+
+    controller.default:
+        class: App\Controller\DefaultController
+        tags:
+            - {name: controller.service_arguments}

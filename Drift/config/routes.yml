@@ -1,0 +1,4 @@
+# Routes
+default:
+  path: /
+  controller: controller.default
