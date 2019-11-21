@@ -1,5 +1,5 @@
 {
-  "name": "driftphp/skeleton",
+  "name": "drift/skeleton",
   "type": "project",
   "license": "MIT",
 
@@ -8,8 +8,7 @@
     "symfony/console": "^4.2",
     "symfony/framework-bundle": "^4.2",
     "drift/http-kernel": "dev-master",
-    "drift/server": "dev-master",
-    "seregazhuk/php-watcher": "dev-master"
+    "drift/server": "dev-master"
   },
 
   "autoload": {
