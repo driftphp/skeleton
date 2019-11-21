@@ -20,9 +20,6 @@ Let's start!
 - [About the architecture](#about-the-architecture)
     - [The HTTP Server](#about-the-architecture)
     - [The HTTP Kernel](#about-the-architecture)
-- [Your first controller](#your-first-controller)
-- [Your first domain service](#your-first-domain-service)
-- [Your first console command](#your-first-console-command)
 - [Libraries](#libraries)
 
 ## Motivations
@@ -223,7 +220,7 @@ Redis/ - Your Redis adapters
 Mysql/ - Your Mysql adapters
 ```
 
-## Your first Controller
+## Libraries
 
-Now that we have this skeleton installed, let's make our first Controller. This
-controller will be pretty simple. Just return a 
+You will find a curated list of ReactPHP libraries very useful for this
+Framework. We will add integrations with some of them during the next months.
