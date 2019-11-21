@@ -21,6 +21,8 @@ use Symfony\Component\HttpFoundation\Request;
 
 /**
  * Class DefaultController.
+ *
+ * You can run this action by making `curl` to /
  */
 class DefaultController
 {
