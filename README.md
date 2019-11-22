@@ -166,7 +166,7 @@ response because the Controller **have to** return a Response instance.
 
 Can we solve this?
 Again. Yes.
-Keel reading.
+Keep reading.
 
 ## About the Architecture
 
