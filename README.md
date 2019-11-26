@@ -213,11 +213,12 @@ simple and useful architecture based on layers.
 
 ```yaml
 Drift/ - All your Drift configuration
-Controller/ - Your controllers. No logic here
-Console/ - Your console commands. No logic here
-Domain/ - Your domain. Only your domain
-Redis/ - Your Redis adapters
-Mysql/ - Your Mysql adapters
+src/
+    - Controller/ - Your controllers. No business logic here
+    - Console/ - Your console commands. No logic here
+    - Domain/ - Your domain. Only your domain
+    - Redis/ - Your Redis adapters
+    - Mysql/ - Your Mysql adapters
 ```
 
 ## Libraries
