@@ -34,9 +34,12 @@ class Kernel extends AsyncKernel
      */
     public function registerBundles(): iterable
     {
-        return [
-            new \Symfony\Bundle\FrameworkBundle\FrameworkBundle(),
-        ];
+        $contents = require $this->getApplicationLayerDir().'/config/bundles.php';
+        foreach ($contents as $class => $envs) {
+            if ($envs[$this->environment] ?? $envs['all'] ?? false) {
+                yield new $class($this);
+            }
+        }
     }
 
     /**
