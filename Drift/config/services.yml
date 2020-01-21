@@ -1,5 +1,6 @@
 parameters:
     kernel.secret: yoursecretshouldbehere
+    app_path: "../.."
 
 framework:
     form: false
@@ -12,11 +13,14 @@ framework:
 # config/services.yaml
 services:
     _defaults:
-        autowire: false
-        autoconfigure: false
+        autowire: true
+        autoconfigure: true
         public: true
 
-    controller.default:
-        class: App\Controller\DefaultController
+    #
+    # Controllers
+    #
+    App\Controller\:
+        resource : "%app_path%/src/Controller/*"
         tags:
             - {name: controller.service_arguments}

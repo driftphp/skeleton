@@ -24,7 +24,7 @@ if ($input->hasParameterOption('--no-debug', true)) {
     putenv('APP_DEBUG='.$_SERVER['APP_DEBUG'] = $_ENV['APP_DEBUG'] = '0');
 }
 
-require dirname(__DIR__).'/Drift/config/bootstrap.php';
+$bootstrapPath = require dirname(__DIR__).'/Drift/config/bootstrap.php';
 
 if ($_SERVER['APP_DEBUG']) {
     umask(0000);
@@ -36,4 +36,6 @@ if ($_SERVER['APP_DEBUG']) {
 
 $kernel = new Kernel($_SERVER['APP_ENV'], (bool) $_SERVER['APP_DEBUG']);
 $application = new Application($kernel);
+$application->add(new \Drift\Server\Console\RunServerCommand($bootstrapPath, 'server:run'));
+$application->add(new \Drift\Server\Console\WatchServerCommand($bootstrapPath, $argv, 'server:watch'));
 $application->run($input);
