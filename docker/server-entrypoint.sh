@@ -1,5 +1,5 @@
 #!/bin/bash
 
-cd /var/www/app
+cd /var/www
 rm -Rf var
-php vendor/bin/server run 0.0.0.0:8000
+php vendor/bin/server watch 0.0.0.0:8000
