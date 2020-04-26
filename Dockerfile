@@ -3,7 +3,7 @@ FROM driftphp/base
 WORKDIR /var/www
 
 #
-# Apisearch installation
+# DriftPHP installation
 #
 COPY . .
 RUN composer install -n --prefer-dist --no-dev --no-suggest && \
