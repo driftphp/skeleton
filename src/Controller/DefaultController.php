@@ -31,10 +31,10 @@ class DefaultController
      */
     public function __invoke(Request $request)
     {
-        return new FulfilledPromise(
-            new JsonResponse([
+        return new JsonResponse(
+            [
                 'message' => 'DriftPHP is working!',
-            ], 200)
+            ], 200
         );
     }
 }
