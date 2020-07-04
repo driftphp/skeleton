@@ -15,7 +15,7 @@ declare(strict_types=1);
 
 use Symfony\Component\Dotenv\Dotenv;
 
-$appDir = dirname(__FILE__).'/../..';
+$appDir = __DIR__ .'/../..';
 require $appDir.'/vendor/autoload.php';
 
 if (is_file($appDir.'/.env')) {
