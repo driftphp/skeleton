@@ -15,9 +15,9 @@ declare(strict_types=1);
 
 namespace App\Controller;
 
-use React\Promise\FulfilledPromise;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
+use function React\Promise\resolve;
 
 /**
  * Class DefaultController.
@@ -31,7 +31,7 @@ class DefaultController
      */
     public function __invoke(Request $request)
     {
-        return new FulfilledPromise(
+        return resolve(
             new JsonResponse([
                 'message' => 'DriftPHP is working!',
             ], 200)
