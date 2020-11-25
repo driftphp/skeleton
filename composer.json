@@ -1,33 +1,41 @@
 {
-    "name": "drift/skeleton",
-    "description": "Skeleton repository ofr DriftPHP",
-    "type": "project",
-    "license": "MIT",
-    "authors": [
-        {
-            "name": "Marc Morera",
-            "email": "yuhu@mmoreram.com"
-        }
-    ],
-    "require": {
-        "php": "^7.3",
-        "symfony/console": "^5.0.0",
-        "symfony/framework-bundle": "^5.0.0",
-        "symfony/dotenv": "^5.0.0",
-        "symfony/stopwatch": "^5.0.0",
-        "symfony/debug": "^4.4.0",
-
-        "drift/http-kernel": "0.1.*, >=0.1.7",
-        "drift/server": "0.1.*, >=0.1.7",
-        "drift/react-functions": "0.1.*",
-        "drift/event-loop-utils": "0.1.*"
-    },
-    "autoload": {
-        "psr-4": {
-            "App\\": "src/",
-            "Domain\\": "src/Domain",
-            "Infrastructure\\": "src",
-            "Drift\\": "Drift/"
-        }
+  "name": "drift/skeleton",
+  "description": "Skeleton repository ofr DriftPHP",
+  "type": "project",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Marc Morera",
+      "email": "yuhu@mmoreram.com"
     }
+  ],
+  "require": {
+    "php": "^7.3",
+    "symfony/console": "^5.0.0",
+    "symfony/framework-bundle": "^5.0.0",
+    "symfony/dotenv": "^5.0.0",
+    "symfony/stopwatch": "^5.0.0",
+    "symfony/debug": "^4.4.0",
+    "drift/http-kernel": "0.1.*, >=0.1.7",
+    "drift/server": "0.1.*, >=0.1.7",
+    "drift/react-functions": "0.1.*",
+    "drift/event-loop-utils": "0.1.*",
+    "symfony/flex": "^1.8"
+  },
+  "autoload": {
+    "psr-4": {
+      "App\\": "src/",
+      "Domain\\": "src/Domain",
+      "Infrastructure\\": "src/Infrastructure",
+      "Drift\\": "Drift/"
+    }
+  },
+  "scripts": {
+    "server": "server run 0.0.0.0:8000",
+    "watcher": "server watch 0.0.0.0:8000 --debug --env=dev"
+  },
+  "extra": {
+    "src-dir": "Drift",
+    "config-dir": "Drift/config"
+  }
 }

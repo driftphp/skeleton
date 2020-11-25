@@ -1,0 +1,8 @@
+framework:
+    secret: '%env(APP_SECRET)%'
+    form: false
+    assets: false
+    session: false
+    translator: false
+    php_errors:
+        log: false

@@ -1,0 +1,20 @@
+parameters:
+    app_path: "../.."
+
+# config/services.yaml
+services:
+    _defaults:
+        autowire: true
+        autoconfigure: true
+
+    App\:
+        resource: '%kernel.project_dir%/src/*'
+        exclude: '%kernel.project_dir%/src/{DependencyInjection,Entity,Migrations,Tests}'
+    #
+    # If you want to provide HTTP Endpoints, include the following part to enable service argument injection
+    # and make controllers public.
+    #
+#    App\Controller\:
+#        resource : "%kernel.project_dir%/src/Controller/*"
+#        tags:
+#            - {name: controller.service_arguments}
