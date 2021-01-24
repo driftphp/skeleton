@@ -10,17 +10,19 @@
         }
     ],
     "require": {
-        "php": "^7.3",
+        "php": "^7.4",
         "symfony/console": "^5.0.0",
         "symfony/framework-bundle": "^5.0.0",
         "symfony/dotenv": "^5.0.0",
         "symfony/stopwatch": "^5.0.0",
-        "symfony/debug": "^4.4.0",
 
-        "drift/http-kernel": "0.1.*, >=0.1.7",
-        "drift/server": "0.1.*, >=0.1.7",
-        "drift/react-functions": "0.1.*",
-        "drift/event-loop-utils": "0.1.*"
+        "drift/http-kernel": "^0.1",
+        "drift/server": "^0.1",
+        "drift/react-functions": "^0.1",
+        "drift/event-loop-utils": "^0.1"
+    },
+    "require-dev": {
+        "seregazhuk/php-watcher": "^0.5"
     },
     "autoload": {
         "psr-4": {
