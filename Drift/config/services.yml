@@ -10,6 +10,11 @@ framework:
     php_errors:
         log: false
 
+#
+# twig:
+#     views_path: "%kernel.project_dir%/views/"
+#
+
 # config/services.yaml
 services:
     _defaults:
