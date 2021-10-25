@@ -1,4 +1,4 @@
-FROM driftphp/base
+FROM driftphp/base-php8
 
 WORKDIR /var/www
 
